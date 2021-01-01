@@ -21,4 +21,9 @@ describe('Hello, TypeScript!', function () {
         assert.equal(hello.message(myName), "Hello, " + myName);
     });
 
+    it('Accepts any number of arguments', function() {
+        let hello: Hello = new Hello();
+        assert.equal(hello.message("one", "two", "three", "four"), "Hello, one two three four");
+    });
+
 });
